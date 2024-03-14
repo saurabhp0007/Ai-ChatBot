@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'
 import { FaCompass } from "react-icons/fa6";
 import { FaRegLightbulb } from "react-icons/fa6";
-import { CiChat2 } from "react-icons/ci";
+import { CiChat2, CiCirclePlus } from "react-icons/ci";
 import { IoCodeSlash } from "react-icons/io5";
 import { LuMic } from "react-icons/lu";
 import { MdOutlineImageSearch } from "react-icons/md";
@@ -14,7 +14,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 
 const Main = () => {
-    const { loading, resultData, input, setInput, prevPrompt, recentPrompt, showResult, onSentMessage }: any = useContext(Context)
+    const { loading, resultData, input, setInput, newChat, recentPrompt, showResult, onSentMessage }: any = useContext(Context)
     const handleEnter = (e: any) => {
         if (e.key === 'Enter') {
             // Call your function here
@@ -23,9 +23,12 @@ const Main = () => {
     };
     return (
 
-        <div className='flex flex-col justify-between w-full h-[90vh] md:h-screen'>
-            <div className='text-3xl m-4 items-start'>
+        <div className='flex flex-col justify-between w-full h-screen'>
+            <div className='flex flex-row justify-between text-3xl md:text-3xl m-4 items-start'>
                 MindMesh
+                <div onClick={newChat} className='md:hidden'>
+                    <CiCirclePlus/>
+                </div>
             </div>
             {!showResult ? (
                 <>
@@ -58,7 +61,7 @@ const Main = () => {
             )
                 :
                 <>
-                    <div className='flex flex-col justify-start items-start m-10'>
+                    <div className='flex flex-col justify-start items-start m-10 '>
                         <div className='flex  justify-center items-start m-2 flex-row'>
                             <MdOutlineQuestionAnswer className='md:text-3xl text-xl' />
                             <span className='md:text-2xl text-xl'> {recentPrompt}</span>
@@ -90,7 +93,7 @@ const Main = () => {
 
                             </div>
                             : (
-                                <ScrollArea className="h-[500px] w-full rounded-md border p-4">
+                                <ScrollArea className="h-[500px] sm:h[300px] w-full rounded-md border p-4">
                                     <span className='md:text-xl text-xs' dangerouslySetInnerHTML={{ __html: resultData }} />
                                 </ScrollArea>
                             )}
@@ -102,7 +105,7 @@ const Main = () => {
                 </>}
 
 
-            <div className='flex justify-center items-center md:mb-16 mb-8 mx-10 relative'>
+            <div className='flex justify-center items-center md:mb-16 mb-16 mx-10 relative '>
                 <input
                     onChange={(e) => setInput(e.target.value)}
                     value={input}
