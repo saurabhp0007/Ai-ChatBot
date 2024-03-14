@@ -23,7 +23,7 @@ const SideBar = () => {
     };
 
     return (
-        <div className={`flex ${isSidebarOpen ? 'w-72' : 'w-24'} flex-col justify-between h-[80vh] md:h-screen bg-slate-100 transition-all duration-300`}>
+        <div className={`flex ${isSidebarOpen ? 'w-72' : 'w-24'} flex-col justify-between h-[90vh] md:h-screen bg-slate-100 transition-all duration-300`}>
 
             <div className="m-8">
 

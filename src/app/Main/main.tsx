@@ -23,7 +23,7 @@ const Main = () => {
     };
     return (
 
-        <div className='flex flex-col justify-between w-full h-[80vh] md:h-screen'>
+        <div className='flex flex-col justify-between w-full h-[90vh] md:h-screen'>
             <div className='text-3xl m-4 items-start'>
                 MindMesh
             </div>
