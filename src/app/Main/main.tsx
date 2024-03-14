@@ -23,14 +23,14 @@ const Main = () => {
     };
     return (
 
-        <div className='flex flex-col justify-between w-full h-screen'>
+        <div className='flex flex-col justify-between w-full h-[80vh] md:h-screen'>
             <div className='text-3xl m-4 items-start'>
                 MindMesh
             </div>
             {!showResult ? (
                 <>
                     <div className='flex flex-col justify-center items-center '>
-                        <span className='md:text-3xl text-xl'> Hello , Saurbh</span>
+                        <span className='md:text-3xl text-xl'> Hello </span>
                         <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text md:text-5xl text-lg font-bold p-2">
                             How can I help you today
                         </span>

@@ -23,7 +23,7 @@ const SideBar = () => {
     };
 
     return (
-        <div className={`flex ${isSidebarOpen ? 'w-72' : 'w-24'} flex-col justify-between h-screen bg-slate-100 transition-all duration-300`}>
+        <div className={`flex ${isSidebarOpen ? 'w-72' : 'w-24'} flex-col justify-between h-[80vh] md:h-screen bg-slate-100 transition-all duration-300`}>
 
             <div className="m-8">
 
@@ -67,7 +67,7 @@ const SideBar = () => {
                         Help
                     </div>
                 ) : (
-                    <span className='text-5xl flex items-center gap-3 cursor-pointer'><FaRegQuestionCircle /></span>
+                    <span className='text-5xl flex items-center gap-3 cursor-pointer'></span>
                 )}
 
                 {isSidebarOpen ? (
@@ -76,7 +76,7 @@ const SideBar = () => {
                         Activity
                     </div>
                 ) : (
-                    <span className='text-5xl flex items-center gap-3 cursor-pointer'><FaClockRotateLeft /></span>
+                    <span className='text-5xl flex items-center gap-3 cursor-pointer'></span>
                 )}
 
                 {isSidebarOpen ? (
@@ -85,7 +85,7 @@ const SideBar = () => {
                         Setting
                     </div>
                 ) : (
-                    <span className='text-5xl flex items-center gap-3 cursor-pointer'><IoMdSettings /></span>
+                    <span className='text-5xl flex items-center gap-3 cursor-pointer'></span>
                 )}
             </div>
 
